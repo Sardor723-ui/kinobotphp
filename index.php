@@ -2,10 +2,10 @@
 error_reporting(0);
 
 /* ================= SOZLAMALAR ================= */
-$token = "8381839257:AAH-FSIdrA6oFbpA_er1vLAKwlN4-xVy1e8";
+$token = "8094642344:AAG0OlfMLbidXS4ZeDkGGjXiiceCKNetrQk";
 $main_admin = 1438837962; // sizning ID
 $kanalcha = "@topkinoneww";
-$bot = "@Topkinonewwbot";
+$bot = "@newtopfilmbot";
 
 /* ================= PAPKALAR ================= */
 @mkdir("data");
@@ -190,4 +190,5 @@ if(is_numeric($text) && file_exists("data/kino/$text.txt")){
         "caption"=>"🎬 $botname"
     ]);
 }
+
 
