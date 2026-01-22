@@ -76,20 +76,22 @@ if($text=="/start"){
 /* ================= ADMIN PANEL ================= */
 if($text=="/admin" && isAdmin($cid)){
     unlink("data/step/$cid.txt");
+
     bot("sendMessage",[
         "chat_id"=>$cid,
-        "text"=>"👮 ADMIN PANEL",
+        "text"=>"👮‍♂️ *ADMIN PANEL (YANGI)*",
+        "parse_mode"=>"Markdown",
         "reply_markup"=>json_encode([
             "keyboard"=>[
-                ["➕ Kino qo‘shish"],
-                ["🗑 Kino o‘chirish"],
-                ["👤 Admin qo‘shish"],
-                ["📊 Statistika"]
+                ["➕ Kino qo‘shish","🗑 Kino o‘chirish"],
+                ["👤 Admin qo‘shish","📊 Statistika"],
+                ["🔄 Panelni yangilash"]
             ],
             "resize_keyboard"=>true
         ])
     ]);
 }
+
 
 /* ================= STATISTIKA ================= */
 if($text=="📊 Statistika" && isAdmin($cid)){
@@ -188,3 +190,4 @@ if(is_numeric($text) && file_exists("data/kino/$text.txt")){
         "caption"=>"🎬 $botname"
     ]);
 }
+
